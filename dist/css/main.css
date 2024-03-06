@@ -1,0 +1,144 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Debugging */
+.dev {
+    border: 2px solid rgb(150, 69, 216);
+}
+
+/* Containers */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container.row {
+    flex-direction: column;
+}
+
+.container .item {
+    margin: 1rem;
+}
+
+/* Navbar */
+nav.container {
+    justify-content: space-around;
+}
+
+nav {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .2s;
+}
+
+nav a:hover {
+    color: rgb(173, 173, 173);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+/* Main */
+
+main {
+    margin-bottom: 3rem;
+}
+
+/* Main - Hero Section */
+
+main #hero {
+    margin-bottom: 3rem;
+    padding: 7rem;
+    background: url("../imgs/hero.jpeg") center;
+    background-size: cover;
+    color: white;
+}
+
+main #hero h1 {
+    font-size: 4rem;
+}
+
+main #hero p {
+    font-size: 1.3rem;
+}
+
+main #hero.container {
+    justify-content: center;
+    align-items: center;
+}
+
+main #hero h1, main #hero p {
+    width: 100%;
+    text-align: center;
+}
+
+/* Main - Reusable section components */
+
+main .title {
+    width: 100%;
+    text-align: center;
+}
+
+/* Main - Article Section */
+
+main #articles .article {
+    width: 20rem;
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+    background-color: gray;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+main #articles .article:hover {
+    transform: translateY(-0.3rem);
+}
+
+main #articles .article h1 {
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    text-align: center;
+    padding: 2.2rem;
+}
+
+footer.container {
+    flex-direction: column;
+}
+
+/* Media Queries - Responsiveness */
+@media screen and (max-width: 425px) {
+    main #hero {
+        padding: 4rem 0rem 4rem 0rem;
+    }
+    main #hero h1 {
+        font-size: 3rem;
+    }
+    main #hero p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav .item.container.links {
+        margin: 0 100vw 0 100vw;
+    }
+}
